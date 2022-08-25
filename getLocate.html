@@ -37,7 +37,7 @@
         }
     }
     function onSuccess(pos) {
-        console.log('经度：' + pos.coords.longitude + '纬度：' + pos.coords.latitude)
+        console.log('经度：' + pos.coords.longitude + '纬度：' + pos.coords.latitude,'sss')
         let marker= L.marker([pos.coords.latitude, pos.coords.longitude])
         marker.addTo(mymap);
         mymap.flyTo(marker._latlng,16)
@@ -61,7 +61,7 @@
     }
 
     var mymap = L.map('mymap', {
-        // crs: L.CRS.EPSG4326,
+        crs: L.CRS.EPSG4326,
         // center: [39.89854, 116.3347],//中心坐标
         // zoom: 10,//缩放级别
         // minZoom: 3,
